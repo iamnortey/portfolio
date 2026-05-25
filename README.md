@@ -8,35 +8,46 @@
 
 ---
 
-## Featured Projects
+## What's in this portfolio
+
+This repository holds the artifacts a senior engineering reviewer would want to see: case studies, architecture documents, decision records (ADRs), operational runbooks, and role-aligned evidence. Implementations live in private repositories ([why](#whats-public-vs-private)); this portfolio is where the *thinking* and *operational discipline* behind each project are documented.
+
+For the active product and lab work behind these case studies, see the [`ninobyte-labs`](https://github.com/ninobyte-labs) and [`ninobyte-cloudops-lab`](https://github.com/ninobyte-cloudops-lab) organizations.
+
+---
+
+## Featured projects
 
 | Project | Description | Stack | Links |
-|---------|-------------|-------|-------|
+|---|---|---|---|
 | **Ojanaa** | WhatsApp-native POS super-app with invoice trust loop | TypeScript, React Native, Next.js, Supabase | [Case Study](./case-studies/ojanaa.md) · [Docs](https://github.com/iamnortey/ojanaa-docs) |
 | **Ninolex** | Pronunciation infrastructure for AI voice applications | TypeScript, Python, Next.js, Modal | [Case Study](./case-studies/ninolex.md) · [Docs](https://github.com/iamnortey/ninolex-docs) |
-| **Ninobyte** | Enterprise tooling for Claude agent ecosystems | Python, Claude Skills, MCP | [Case Study](./case-studies/ninobyte.md) · [Docs](https://github.com/iamnortey/ninobyte-docs) |
+| **Ninobyte** | Governance-first agent tooling and applied AI infrastructure | Python, Claude Skills, MCP | [Case Study](./case-studies/ninobyte.md) · [Docs](https://github.com/iamnortey/ninobyte-docs) |
 | **Ninolex-GH** | Open Ghanaian pronunciation dictionary | Python, W3C PLS | [Repo](https://github.com/iamnortey/ninolex-gh) |
-| **Prepnest** | Educational content platform for exam preparation | React Native, Sanity CMS, Manim | [Case Study](./case-studies/prepnest.md) · [Docs](https://github.com/iamnortey/prepnest-docs) |
+| **Prepnest** | Educational content platform for WASSCE / BECE exam preparation | React Native, Sanity CMS, Manim | [Case Study](./case-studies/prepnest.md) · [Docs](https://github.com/iamnortey/prepnest-docs) |
 
 ---
 
-## Engineering Principles
+## Engineering principles
 
-### Phase-Gated Development
+### Phase-gated development
 No Phase 2 features until Phase 1 passes all quality gates. Every phase has explicit acceptance criteria. Scope creep is prevented by design.
 
-### Data-First Thinking
+### Data-first thinking
 Get the schema and domain model right before building features. The data model is the foundation everything else builds on.
 
-### Validation-First
+### Validation-first
 Every claim traces back to evidence. Skills are validated against official documentation. Decisions are logged in ADRs.
 
-### Operational Clarity
+### Operational clarity
 Runbooks, decision logs, and audit trails are first-class citizens — not afterthoughts. Systems are designed to be observable, debuggable, and maintainable.
+
+### Governance before deployment
+Guardrails precede access, especially in AWS and education-data contexts. Public-track repos publish shape and rules; rights-sensitive data stays in private vaults.
 
 ---
 
-## Technical Stack
+## Technical stack
 
 | Layer | Technologies |
 |-------|-------------|
@@ -49,7 +60,7 @@ Runbooks, decision logs, and audit trails are first-class citizens — not after
 
 ---
 
-## Role Alignment
+## Role alignment
 
 Evidence mapped to specific engineering roles:
 
@@ -62,7 +73,7 @@ Evidence mapped to specific engineering roles:
 
 ---
 
-## Architecture Samples
+## Architecture samples
 
 - [Ojanaa System Architecture](./architecture/ojanaa-system.md)
 - [Invoice Trust Loop Flow](./architecture/ojanaa-trust-loop.md)
@@ -70,7 +81,7 @@ Evidence mapped to specific engineering roles:
 
 ---
 
-## Decision Records
+## Decision records
 
 Sample ADRs demonstrating technical decision-making:
 
@@ -80,11 +91,19 @@ Sample ADRs demonstrating technical decision-making:
 
 ---
 
-## Operational Artifacts
+## Operational artifacts
 
 - [Incident Response Runbook](./runbooks/incident-response.md)
 - [Daily Workflow Runbook](./runbooks/daily-workflow.md)
 
 ---
 
-*Core implementations remain in private repositories. This portfolio showcases architecture, decisions, and operational artifacts.*
+## What's public vs private
+
+This portfolio repository contains architecture, decision records, operational runbooks, and role-aligned evidence. Production code lives in private repositories:
+
+- **Personal projects** (Ojanaa, Ninolex core, Prepnest app) — `iamnortey/*` (private)
+- **Applied AI and education data** (GEDOS, Teacher Portal, metabolic-platform) — [`ninobyte-labs`](https://github.com/ninobyte-labs) (org profile public; product repos private)
+- **AWS-native training labs** — [`ninobyte-cloudops-lab`](https://github.com/ninobyte-cloudops-lab) (org profile + 3 overview repos public; product repos private)
+
+For technical discussions, partnership conversations, or hiring inquiries, reach out via [LinkedIn](https://linkedin.com/in/inortey/).
