@@ -1,6 +1,8 @@
 # Isaac Nortey — Engineering Portfolio
 
-> Case studies, architecture, decision records, and operational artifacts from production systems.
+> Public proof hub. Case studies, architecture, decision records, runbooks, and proof-pack artifacts from production systems and the Connected AI Operator practice.
+
+**Connect. Govern. Execute. Prove.**
 
 [![GitHub](https://img.shields.io/badge/GitHub-iamnortey-black?style=flat&logo=github)](https://github.com/iamnortey)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-inortey-blue?style=flat&logo=linkedin)](https://linkedin.com/in/inortey/)
@@ -14,7 +16,7 @@
 |---------|-------------|-------|-------|
 | **Ojanaa** | WhatsApp-native POS super-app with invoice trust loop | TypeScript, React Native, Next.js, Supabase | [Case Study](./case-studies/ojanaa.md) · [Docs](https://github.com/iamnortey/ojanaa-docs) |
 | **Ninolex** | Pronunciation infrastructure for AI voice applications | TypeScript, Python, Next.js, Modal | [Case Study](./case-studies/ninolex.md) · [Docs](https://github.com/iamnortey/ninolex-docs) |
-| **Ninobyte** | Enterprise tooling for Claude agent ecosystems | Python, Claude Skills, MCP | [Case Study](./case-studies/ninobyte.md) · [Docs](https://github.com/iamnortey/ninobyte-docs) |
+| **Ninobyte** | Connected AI Operator doctrine and three-agent local AI operating system | TypeScript, Python, Claude Skills, MCP | [Case Study](./case-studies/ninobyte.md) · [Docs](https://github.com/iamnortey/ninobyte-docs) |
 | **Ninolex-GH** | Open Ghanaian pronunciation dictionary | Python, W3C PLS | [Repo](https://github.com/iamnortey/ninolex-gh) |
 | **Prepnest** | Educational content platform for exam preparation | React Native, Sanity CMS, Manim | [Case Study](./case-studies/prepnest.md) · [Docs](https://github.com/iamnortey/prepnest-docs) |
 
@@ -33,6 +35,9 @@ Every claim traces back to evidence. Skills are validated against official docum
 
 ### Operational Clarity
 Runbooks, decision logs, and audit trails are first-class citizens — not afterthoughts. Systems are designed to be observable, debuggable, and maintainable.
+
+### Governed Execution
+AI is wired into real systems through approval gates and read-first defaults. Every workflow produces a portable proof-of-work artifact — a README, a screenshot, a recorded session, or a sanitized evidence pack — that a reviewer can act on without seeing the private internals.
 
 ---
 
@@ -87,4 +92,4 @@ Sample ADRs demonstrating technical decision-making:
 
 ---
 
-*Core implementations remain in private repositories. This portfolio showcases architecture, decisions, and operational artifacts.*
+*Core implementations remain in private repositories. This portfolio showcases architecture, decisions, operational artifacts, and proof-pack outputs from the Connected AI Operator practice. Public-safe by design — no client data, credentials, or internal repository contents.*
