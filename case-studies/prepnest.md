@@ -77,7 +77,7 @@ flowchart TB
 
 ### Clean-cut repository for the release line
 **Decision:** cut the release-candidate app into a standalone repository with a fresh history, separating it from years of prototype iterations (including a retired Sanity CMS + hosted-search generation).
-**Result:** a reviewable, governable release line; the earlier architecture survives publicly as the open-source [sanity-education-starter](https://github.com/iamnortey/sanity-education-starter).
+**Result:** a reviewable, governable release line; the earlier architecture is preserved publicly as the archived open-source [sanity-education-starter](https://github.com/iamnortey/sanity-education-starter).
 
 ---
 
