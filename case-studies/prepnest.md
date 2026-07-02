@@ -1,42 +1,34 @@
-# Prepnest: Educational Content Platform
+# Prepnest: Offline-First WASSCE Study OS
 
 ## 1. Executive Summary
 
-Prepnest is a structured content platform for WASSCE/BECE exam preparation, built with a schema-first approach to educational content modeling. It powers search, analytics, and adaptive learning through a well-designed content hierarchy.
+Prepnest is a mobile study companion for students preparing for the WASSCE in Ghana, built as an **offline-first Study OS**: the study library, search, and all personal study state live on the device. The engineering story is about three disciplines working together — local-first architecture, a governed content pipeline with human review gates, and an honesty-first product voice enforced by automated checks.
 
-**Stack:** React Native, Expo, Next.js, Sanity CMS, PostgreSQL, Manim
-
-**Status:** Development phase
+**Stack:** Expo, React Native, TypeScript, SQLite (bundled, full-text search), Manim
+**Status:** Private, pre-release (internal alpha). Prepnest is an independent product — not affiliated with or endorsed by WAEC.
 
 ---
 
 ## 2. The Pain Point
 
-Students preparing for standardized exams in Ghana face challenges:
+Students preparing for the WASSCE face a stacked set of constraints:
 
-1. **Fragmented content:** Study materials scattered across textbooks, notes, and random websites
-2. **No structured curriculum:** Hard to know what to study next
-3. **Passive learning:** Static PDFs and videos don't adapt to student needs
-4. **Visual concepts:** Math and science concepts are hard to understand without animation
+1. **Connectivity and data cost.** Reliable internet is not a given; mobile data is a real expense. A study tool that needs the network every session gets abandoned.
+2. **Fragmented material.** Study content is scattered across textbooks, notes, and unvetted websites of uneven quality.
+3. **Trust.** Exam preparation is high stakes. Wrong answers, fake availability, and unverified material are worse than nothing.
+4. **Hard-to-visualize concepts.** Math and science topics need motion and diagrams, not another static PDF.
 
 ---
 
 ## 3. The Solution
 
-Prepnest provides a **structured content pipeline**:
+An app whose entire study loop works in airplane mode, fed only by content that has cleared human review:
 
-```
-Subject → Topic → Lesson → Question
-   ↓        ↓        ↓         ↓
- Math    Algebra  Quadratic  Practice
-                  Equations   Problems
-```
-
-**Key capabilities:**
-- Hierarchical content organization
-- Animated explanations via Manim
-- Search-driven discovery (Typesense)
-- Progress tracking
+- **Bundled study library** — lessons, practice questions, formulas, and glossary ship inside the app in a local SQLite database.
+- **Local full-text search** — search-first navigation over the whole library with zero network calls.
+- **Reader-grade study surfaces** — a typographic lesson reader with highlights, private notes, bookmarks; practice questions with "try first / answer / full solution" modes.
+- **Local-only user state** — study history, saved items, and preferences stay on the phone; no account is required to study.
+- **Animated explanations** — math/science visuals produced in a dedicated Manim studio and imported through the same governed pipeline as text.
 
 ---
 
@@ -44,149 +36,60 @@ Subject → Topic → Lesson → Question
 
 ```mermaid
 flowchart TB
-    subgraph CMS["Content Management (Sanity)"]
-        SUB[Subjects]
-        TOP[Topics]
-        LES[Lessons]
-        QUE[Questions]
+    subgraph Pipeline["Governed Content Pipeline (private)"]
+        SRC[Curriculum-aligned sourcing] --> REV[Human examiner review]
+        MANIM[Manim media factory] --> REV
+        REV --> GATE{Release gates<br/>fail closed}
     end
 
-    subgraph Apps["Application Layer"]
-        MOB[Mobile App - Expo]
-        WEB[Web Admin - Next.js]
-    end
+    GATE -->|released content only| DB[(Bundled SQLite DB<br/>+ FTS index)]
 
-    subgraph Search["Search Layer"]
-        TS[Typesense]
+    subgraph Device["On Device (Expo / React Native)"]
+        DB --> SEARCH[Local search]
+        DB --> SURFACES[Lesson reader · question practice<br/>formulas · glossary · saved library]
+        STATE[(Local-only user state)] --- SURFACES
     end
-
-    subgraph Media["Media Generation"]
-        MAN[Manim Animations]
-    end
-
-    SUB --> TOP
-    TOP --> LES
-    LES --> QUE
-    CMS --> TS
-    TS --> MOB
-    CMS --> MOB
-    CMS --> WEB
-    MAN --> CMS
 ```
 
 ---
 
 ## 5. Key Engineering Decisions
 
-### Headless CMS (Sanity)
-**Decision:** Use Sanity for content management rather than custom CMS
+### Offline-first with a bundled database
+**Decision:** ship the content corpus and its search index inside the app instead of serving from the cloud.
+**Tradeoff:** bigger install size and content updates ride app releases — accepted, because the alternative (per-session data cost) fails the market.
+**Result:** every study feature works without connectivity; data cost after install is effectively zero.
 
-**Tradeoff:** Less control over editing experience, but faster development
+### Content governance as executable gates
+**Decision:** model content trust in the pipeline itself — every item carries sourcing and review status, and release validation **fails closed**: unreviewed content structurally cannot reach a release build.
+**Tradeoff:** slower content velocity than "just import it".
+**Result:** the app can honestly claim that everything a student sees passed human review — the core trust promise of the product.
 
-**Rationale:** Sanity's schema-first approach matches our content hierarchy needs. Real-time collaboration for content editors.
+### Honesty-first UX, pinned by tests
+**Decision:** the interface never fakes availability — unreleased papers say "being prepared", missing narration says so, and a public-exam countdown renders only when the official date is confirmed. A smoke-script suite pins this copy and behavior so regressions fail CI, not students.
+**Tradeoff:** the app sometimes admits it has less than a marketing screenshot would show.
+**Result:** product truthfulness became testable, not aspirational.
 
-### Schema-First Content Modeling
-**Decision:** Define Subject → Topic → Lesson → Question hierarchy before building UI
+### A media factory, not inline assets
+**Decision:** produce math/science animations in a separate private Manim studio with its own design system, entering the app only through the review pipeline.
+**Tradeoff:** more moving parts than dropping images into the repo.
+**Result:** visual explanations get the same governance and quality bar as text.
 
-**Tradeoff:** Upfront design work, less flexibility for ad-hoc content
-
-**Rationale:** Educational content has natural structure. Encoding it in the schema prevents chaos.
-
-### Manim for Animations
-**Decision:** Use Manim (3Blue1Brown's library) for animated math explanations
-
-**Tradeoff:** Python dependency, requires technical skill to create content
-
-**Rationale:** Best-in-class math visualization. Students understand concepts better with animation.
-
----
-
-## 6. Security & Privacy
-
-- Standard web application security
-- User authentication for progress tracking
-- Content access controls (free vs. premium)
-- No PII beyond basic user accounts
+### Clean-cut repository for the release line
+**Decision:** cut the release-candidate app into a standalone repository with a fresh history, separating it from years of prototype iterations (including a retired Sanity CMS + hosted-search generation).
+**Result:** a reviewable, governable release line; the earlier architecture survives publicly as the open-source [sanity-education-starter](https://github.com/iamnortey/sanity-education-starter).
 
 ---
 
-## 7. Reliability & Ops
+## 6. What This Case Study Demonstrates
 
-- Sanity handles CMS reliability
-- Typesense for fast, reliable search
-- Mobile app designed for offline-first where possible
-- Content versioning via Sanity
-
----
-
-## 8. Impact & Metrics
-
-| Metric | Value |
-|--------|-------|
-| Animation templates | 533K+ lines Python |
-| Content schema | Defined |
-| Documentation | Design system + UI overview |
+- **Local-first engineering** under real emerging-market constraints (connectivity, data cost, device range).
+- **Governance as architecture** — human review and release gates expressed in code, not policy documents.
+- **Product honesty as a testable property** — copy and availability claims pinned by an automated smoke suite.
+- **Multi-repo production discipline** — app, content pipeline, and media factory as separately governed private workspaces with a curated public documentation surface.
 
 ---
 
-## 9. Demo
+## 7. Current Status
 
-### Content Hierarchy
-
-```
-Mathematics (Subject)
-├── Algebra (Topic)
-│   ├── Linear Equations (Lesson)
-│   │   ├── Introduction [Video + Animation]
-│   │   ├── Worked Examples
-│   │   └── Practice Questions (5)
-│   └── Quadratic Equations (Lesson)
-│       ├── Introduction [Video + Animation]
-│       ├── Factoring Method
-│       ├── Quadratic Formula
-│       └── Practice Questions (10)
-└── Geometry (Topic)
-    └── ...
-```
-
-### Sanity Schema Example
-
-```javascript
-// Subject schema
-{
-  name: 'subject',
-  title: 'Subject',
-  type: 'document',
-  fields: [
-    { name: 'title', type: 'string' },
-    { name: 'slug', type: 'slug' },
-    { name: 'description', type: 'text' },
-    { name: 'icon', type: 'image' },
-    { name: 'topics', type: 'array', of: [{ type: 'reference', to: [{ type: 'topic' }] }] }
-  ]
-}
-```
-
----
-
-## 10. What I'd Improve Next
-
-1. **Adaptive learning:** Recommend content based on student performance
-2. **Offline mode:** Full offline access for students with unreliable internet
-3. **Analytics dashboard:** Insights for teachers and content creators
-4. **Community features:** Discussion forums, study groups
-
----
-
-## 11. Repo Access Note
-
-The core implementation of Prepnest is in **private repositories** to protect educational content and business logic.
-
-The open-source [sanity-education-starter](https://github.com/iamnortey/sanity-education-starter) demonstrates the schema patterns used.
-
-This case study and the [prepnest-docs](https://github.com/iamnortey/prepnest-docs) repository contain:
-- Content modeling documentation
-- Design system documentation
-- Architecture overview
-
-For collaboration inquiries, please reach out directly.
+Private, pre-release internal alpha. Public distribution is deliberately gated on completed examiner review, release-owner sign-off, and store/privacy readiness. Architecture docs live at [prepnest-docs](https://github.com/iamnortey/prepnest-docs); deeper walkthroughs are available on request.
