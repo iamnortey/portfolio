@@ -1,11 +1,13 @@
 # Isaac Nortey
 
-I’m the person behind **Ninobyte**, a one-person software and practical AI training practice focused on US small and micro businesses, starting in Greater Boston.
+I’m the person behind **Ninobyte**, working across IT consulting, custom software and practical training.
 
-I use Codex and Claude Code to help turn ideas into useful software. I own the requirements, review the changes, test the experience and decide what is ready to ship.
+I build software, connect tools and help people develop the skills to solve problems in their own work. I work solo with Codex and Claude Code, taking responsibility for the requirements, reviews, testing and delivery.
 
-My current work includes Builders 60’s live application service, Ninobyte Learning, education products in private review and commerce workflows in development.
+My current projects include Builders 60’s live application service, Ninobyte Learning, education products in private review and commerce workflows in development.
 
-I’m interested in the work that fills an owner’s week: handling requests, understanding stock, preparing documents and helping staff use their tools. A useful first project starts with one of those tasks and ends with a result the owner can check and repeat.
+Through Ninobyte, I also help small businesses and teams learn to set up Codex, build reusable agent skills, develop MCP servers and connectors, work with APIs and create tools around everyday tasks. That can mean improving a document workflow, connecting business systems or building a small application together.
 
-[Explore the portfolio](./README.md) · [Ninobyte](https://ninobyte.com/) · [LinkedIn](https://linkedin.com/in/inortey/)
+I want the person using the result to understand it well enough to check, repeat and maintain it.
+
+**[Visit Ninobyte](https://ninobyte.com/)** · [Training areas](./BUSINESS-TRAINING.md) · [Project portfolio](./README.md)

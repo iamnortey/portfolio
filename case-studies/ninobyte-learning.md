@@ -16,10 +16,10 @@ The starter’s November publication checks covered learner enrollment, lesson p
 
 **Modern Leverage** extends the approach into a seven-session programme. Its first session was published for invited review; the rest remains in development. A prepared curriculum is not a completed cohort.
 
-## Adapting it for Greater Boston businesses
+## Training around everyday work
 
-My proposed small-business training starts with work the owner already does: reviewing a stock export, drafting a customer reply, preparing a procedure or building a simple tool with Codex. Each session ends with an output to check and instructions the person can use again.
+I help small businesses and teams learn through work they already understand: reviewing a stock export, drafting a customer reply, preparing a procedure or building a useful tool with Codex. Training can include Codex setup, reusable agent skills, MCP servers, connectors, plugins and API workflows. Each project needs an output to check and instructions the person can use again.
 
-I bring the same approach to IT training: understand the system, practice with safe examples, test the result and document recovery. Training availability and scope would be agreed with each business.
+I bring the same approach to IT training: understand the system, practice with safe examples, test the result and document recovery. Training scope and availability are agreed around the task and the learner’s experience. [Explore training areas and examples](../BUSINESS-TRAINING.md).
 
 **My role:** learning design, examples and worksheets, website implementation, review and learner-journey verification, with Codex and Claude Code supporting the build.

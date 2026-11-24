@@ -1,14 +1,14 @@
-# Proposed pilot: useful inventory answers for a local retailer
+# Proposed pilot: useful inventory answers for a retailer
 
 **Status:** proposed pilot. Clover authorization and adapter scaffolding exists in earlier Ninolex work; the inventory adapter uses placeholders. A working ChatGPT/Codex inventory connection and merchant deployment are not claimed.
 
 ## Start with the owner’s question
 
-For an independent Greater Boston retailer, I would first identify one recurring stock question: which items need review, which records look inconsistent, or what should be checked before reordering?
+For an independent retailer, I would first identify one recurring stock question: which items need review, which records look inconsistent, or what should be checked before reordering?
 
 We would use an owner-approved product/stock export and agree the rules together. The first result would be a simple report whose calculations can be checked against the source. ChatGPT could help explain and explore that report; Codex could help me build and test the tool.
 
-## First community day
+## First working session
 
 1. Watch how the owner checks stock today and record the task’s starting time and common errors.
 2. Choose one question and prepare a permitted sample without customer or payment data.
