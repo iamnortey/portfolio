@@ -1,95 +1,58 @@
-# Isaac Nortey — Engineering Portfolio
+# Ninobyte · Software and practical AI training
 
-> Public proof hub. Case studies, architecture, decision records, runbooks, and proof-pack artifacts from production systems and the Connected AI Operator practice.
+I’m **Isaac Nortey**, the person behind Ninobyte. I run a one-person practice, using **Codex and Claude Code** to build useful software and learning resources while owning the decisions, testing and delivery.
 
-**Connect. Govern. Execute. Prove.**
+My current focus is **small and micro businesses in the United States, starting in Greater Boston**. I want to help owners and small teams make everyday work easier, then teach them to use and maintain the result.
 
-[![GitHub](https://img.shields.io/badge/GitHub-iamnortey-black?style=flat&logo=github)](https://github.com/iamnortey)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-inortey-blue?style=flat&logo=linkedin)](https://linkedin.com/in/inortey/)
-[![Website](https://img.shields.io/badge/Website-inortey.com-black?style=flat)](https://inortey.com)
+[Ninobyte](https://ninobyte.com/) · [Learning](https://learn.ninobyte.com/) · [GitHub profile](https://github.com/iamnortey) · [LinkedIn](https://linkedin.com/in/inortey/)
 
----
+## Start here
 
-## Featured Projects
+**[Builders 60: building the system behind a two-builder initiative](./case-studies/builders60.md)** is my clearest delivery example. It combines a live public site, application handling, recovery paths, consent choices, operational checks and a documented release process. The proposed next teaching focus is helping two builders turn ideas into tested projects with Codex. The system is live; participant outcomes are still ahead.
 
-| Project | Description | Stack | Links |
-|---------|-------------|-------|-------|
-| **Ojanaa** | WhatsApp-native POS super-app with invoice trust loop | TypeScript, React Native, Next.js, Supabase | [Case Study](./case-studies/ojanaa.md) · [Docs](https://github.com/iamnortey/ojanaa-docs) |
-| **Ninolex** | Pronunciation infrastructure for AI voice applications | TypeScript, Python, Next.js, Modal | [Case Study](./case-studies/ninolex.md) · [Docs](https://github.com/iamnortey/ninolex-docs) |
-| **Ninobyte** | Connected AI Operator doctrine and three-agent local AI operating system | TypeScript, Python, Claude Skills, MCP | [Case Study](./case-studies/ninobyte.md) · [Docs](https://github.com/iamnortey/ninobyte-docs) |
-| **Ninolex-GH** | Open Ghanaian pronunciation dictionary | Python, W3C PLS | [Repo](https://github.com/iamnortey/ninolex-gh) |
-| **Prepnest** | Educational content platform for exam preparation | React Native, Sanity CMS, Manim | [Case Study](./case-studies/prepnest.md) · [Docs](https://github.com/iamnortey/prepnest-docs) |
+## Selected projects
 
----
+| Project | Problem and work | Status |
+|---|---|---|
+| [Builders 60](./case-studies/builders60.md) | Reliable programme discovery, applications and review operations | Live site and application workflow |
+| [Ninobyte Learning](./case-studies/ninobyte-learning.md) | Practical AI skills taught through real tasks and checked outputs | Live site and published free starter; larger curriculum developing |
+| [Prepnest Library](./case-studies/prepnest-library.md) | Finding and preparing structured teaching resources | Protected review build |
+| [GHSchools](./case-studies/ghschools.md) | School discovery, comparison and preparation | Protected review build |
+| [Ojanaa](./case-studies/ojanaa.md) | Invoices, seller-confirmed receipts and commerce operations | Private implementation; rollout unverified |
+| [Circle MCP](./case-studies/circle-mcp.md) | Inspecting and operating a learning community through AI tools | Implemented server; public documentation |
 
-## Engineering Principles
+These are my own projects and learning systems. They are not presented as paid US client engagements. Ghana-focused education and commerce work retains its original audience and context.
 
-### Phase-Gated Development
-No Phase 2 features until Phase 1 passes all quality gates. Every phase has explicit acceptance criteria. Scope creep is prevented by design.
+## Applying the work to a small business
 
-### Data-First Thinking
-Get the schema and domain model right before building features. The data model is the foundation everything else builds on.
+| Business need | Relevant experience | A useful first project |
+|---|---|---|
+| Customer requests arrive in different places | Builders 60 forms, validation and recovery | A clear intake form and review workflow |
+| Stock records are difficult to act on | Ojanaa commerce foundations; Clover scaffolding | An owner-checked inventory report from an approved export |
+| Staff struggle to find information | Prepnest Library discovery and structured content | A searchable, maintained knowledge resource |
+| AI feels difficult to use consistently | Ninobyte Learning exercises and worksheets | One repeatable task with examples and a check routine |
+| Community questions get missed | Circle MCP information and diagnostic tools | A reviewable list of questions needing attention |
 
-### Validation-First
-Every claim traces back to evidence. Skills are validated against official documentation. Decisions are logged in ADRs.
+The inventory example is developed in the **[proposed Clover/POS pilot](./proposals/clover-inventory-pilot.md)**. It describes the first experiment and its success criteria; it is not a claim of an existing merchant installation.
 
-### Operational Clarity
-Runbooks, decision logs, and audit trails are first-class citizens — not afterthoughts. Systems are designed to be observable, debuggable, and maintainable.
+## Building with Codex and Claude Code
 
-### Governed Execution
-AI is wired into real systems through approval gates and read-first defaults. Every workflow produces a portable proof-of-work artifact — a README, a screenshot, a recorded session, or a sanitized evidence pack — that a reviewer can act on without seeing the private internals.
+I use Codex to move between requirements, code, tests and browser verification, with Claude Code as a complementary implementation and review partner. I decide the scope, review changes and approve releases. My process includes realistic failure cases and a handoff another person can follow.
 
----
+Training follows the same pattern: bring one task, work through an example, check the output and save a workflow that can be repeated. Proposed Greater Boston sessions would cover inventory questions, customer communication, document preparation and practical software building.
 
-## Technical Stack
+## Further technical work
 
-| Layer | Technologies |
-|-------|-------------|
-| **Languages** | TypeScript, Python, SQL (PostgreSQL / PLpgSQL) |
-| **Frontend** | React, Next.js, React Native, Expo |
-| **Backend** | Node.js, Next.js API Routes, Modal (serverless) |
-| **Data** | PostgreSQL, Supabase, Typesense |
-| **AI / Voice** | Claude, ElevenLabs, Vapi, CMUdict |
-| **Infrastructure** | GitHub Actions, Supabase, Modal |
+- [Ninobyte practice](./case-studies/ninobyte.md)
+- [Prepnest mobile architecture](./case-studies/prepnest.md) — a separate pre-release mobile study project
+- [Ninolex](./case-studies/ninolex.md) — pronunciation tooling and earlier integration work
+- [Ninolex-GH](https://github.com/iamnortey/ninolex-gh) — public pronunciation dictionary and export tooling
+- [CloudOps learning foundation](https://github.com/ninobyte-cloudops-lab/cloudops-lab-overview) and [AI security learning foundation](https://github.com/ninobyte-cloudops-lab/ai-security-governance-lab-overview) — learning foundations, not open cohorts
 
----
+Architecture samples, [decision records](./adrs/), [runbooks](./runbooks/) and [engineering role examples](./roles/) remain available for deeper review. Older technical records describe their original development context; current project summaries distinguish implementation, review builds and public availability.
 
-## Role Alignment
+## Working together
 
-Evidence mapped to specific engineering roles:
+I’m interested in practical projects with independent retailers, service businesses, educators and community organizations. Start with one recurring task, agree what a useful result looks like, and build from there.
 
-- [Platform Engineering](./roles/platform-engineering.md)
-- [SRE / Reliability Engineering](./roles/sre-reliability.md)
-- [Data Infrastructure](./roles/data-infrastructure.md)
-- [Security Engineering](./roles/security-corporate.md)
-- [Full-Stack / Product Engineering](./roles/fullstack-product.md)
-- [Technical Support Engineering](./roles/technical-support-engineering.md)
-
----
-
-## Architecture Samples
-
-- [Ojanaa System Architecture](./architecture/ojanaa-system.md)
-- [Invoice Trust Loop Flow](./architecture/ojanaa-trust-loop.md)
-- [Ninolex Pronunciation Pipeline](./architecture/ninolex-pipeline.md)
-
----
-
-## Decision Records
-
-Sample ADRs demonstrating technical decision-making:
-
-- [ADR-001: Phase-Gated Development](./adrs/001-phase-gated-development.md)
-- [ADR-002: Idempotent Webhook Handlers](./adrs/002-idempotent-webhooks.md)
-- [ADR-003: API-First Surface Design](./adrs/003-api-first-surface.md)
-
----
-
-## Operational Artifacts
-
-- [Incident Response Runbook](./runbooks/incident-response.md)
-- [Daily Workflow Runbook](./runbooks/daily-workflow.md)
-
----
-
-*Core implementations remain in private repositories. This portfolio showcases architecture, decisions, operational artifacts, and proof-pack outputs from the Connected AI Operator practice. Public-safe by design — no client data, credentials, or internal repository contents.*
+Find me through [Ninobyte](https://ninobyte.com/) or [LinkedIn](https://linkedin.com/in/inortey/).

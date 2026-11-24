@@ -1,79 +1,13 @@
 # About Isaac Nortey
 
-## The Short Version
+I run **Ninobyte**, a one-person software and practical AI training practice. I build with Codex and Claude Code, and I take responsibility for deciding what to build, checking the work and delivering it.
 
-I build systems that are observable, debuggable, and maintainable—not just functional.
+My current focus is helping small and micro businesses in the US, starting in Greater Boston. I’m interested in the everyday work that fills an owner’s week: handling requests, understanding stock, preparing documents, finding information and helping staff use their tools.
 
-My current work includes:
-- A **WhatsApp POS platform** for emerging markets (solving trust in informal commerce)
-- A **pronunciation infrastructure** for AI voice (solving how TTS engines say brand names)
-- **Developer tooling** for Claude agents (solving enterprise adoption of AI)
+My projects span live application systems, practical AI learning, education platforms, commerce workflows and AI integrations. [Builders 60](./case-studies/builders60.md) is a live example of the operational work; [the portfolio](./README.md) makes each project’s delivery status clear.
 
----
+I use AI to increase what I can build, while retaining human judgment at the points that matter. I check outputs against their sources, test failure and recovery paths, and leave instructions someone else can follow.
 
-## How I Think About Engineering
+I also want people to leave a training session with something they can use: a checked output, a repeatable workflow and enough understanding to recognize when the answer is wrong.
 
-### Operational Clarity First
-
-Incidents, edge cases, and "what happens when this fails?" are part of the design, not an afterthought. Every system I build has:
-
-- **Runbooks** for operational procedures
-- **Decision logs** for architectural choices
-- **Phase gates** for quality control
-- **Audit trails** for accountability
-
-### Data-First Mindset
-
-Get the schema and domain model right before trying to scale. Whether it's pronunciation phonemes, invoice workflows, or educational content, the data model is the foundation everything else builds on.
-
-### Pragmatic Simplicity
-
-I prefer small, composable building blocks over big, fragile frameworks. A single backend surface is better than microservices for the sake of microservices. A working prototype with good tests beats a perfect architecture that never ships.
-
----
-
-## What I Care About
-
-**Shipping:** Every project has CI, tests, and documented guardrails. Code that isn't deployed is code that doesn't matter.
-
-**Data Quality:** Schema-first, validation-first. If the data model is wrong, nothing built on top of it will be right.
-
-**Operational Excellence:** Runbooks, decision logs, phase gates. Systems should be maintainable by someone who didn't write them.
-
-**Emerging Markets:** I build for contexts where infrastructure is unreliable, trust is low, and users communicate via WhatsApp. That means idempotent operations, offline-first thinking, and human-verifiable proof of transactions.
-
----
-
-## Technical Range
-
-| Domain | Experience |
-|--------|------------|
-| **Full-Stack** | TypeScript, React, Next.js, React Native, Node.js |
-| **Data** | PostgreSQL, Supabase, SQL optimization, schema design |
-| **Voice/AI** | Claude/Anthropic, ElevenLabs, pronunciation systems |
-| **Infrastructure** | CI/CD, GitHub Actions, serverless (Modal) |
-| **Mobile** | React Native, Expo |
-
----
-
-## What I'm Looking For
-
-Roles where I can apply systems thinking to hard problems:
-
-- **Platform Engineering** — Building tools that other engineers use
-- **Data Infrastructure** — Pipelines, APIs, and data quality
-- **SRE / Reliability** — Operational excellence at scale
-- **Technical Support Engineering** — Deep debugging and customer-facing problem solving
-
-I'm particularly interested in companies where:
-- Engineering craft matters
-- Documentation is valued
-- Operational clarity is part of the culture
-
----
-
-## Contact
-
-- **GitHub:** [@iamnortey](https://github.com/iamnortey)
-- **LinkedIn:** [linkedin.com/in/inortey](https://linkedin.com/in/inortey/)
-- **Website:** [inortey.com](https://inortey.com)
+[Ninobyte](https://ninobyte.com/) · [Ninobyte Learning](https://learn.ninobyte.com/) · [LinkedIn](https://linkedin.com/in/inortey/) · [GitHub](https://github.com/iamnortey)
