@@ -1,25 +1,21 @@
-# Ninobyte: one person building and teaching with AI
+# Ninobyte
 
-I’m Isaac Nortey. I run Ninobyte as a one-person software and practical AI training practice, using Codex and Claude Code to extend what I can build while retaining responsibility for the work.
+Software and practical AI training from Isaac Nortey, a one-person practice focused on US small and micro businesses, starting in Greater Boston.
 
-## Work you can inspect
+## Current projects
 
-- [Builders 60](./builders60.md): live programme website and application workflow, with a proposed Codex-focused path for two builders.
-- [Ninobyte Learning](./ninobyte-learning.md): live learning website, published free starter and a larger curriculum in development.
-- [Prepnest Library](./prepnest-library.md) and [GHSchools](./ghschools.md): education products in protected review.
-- [Ojanaa](./ojanaa.md): implemented commerce workflows and backend foundations.
-- [Circle MCP](./circle-mcp.md): a connected AI interface for community information and content operations.
+- **[Builders 60](./builders60.md)** — Live programme website and application workflow; proposed Codex project learning for two builders.
+- **[Ninobyte Learning](./ninobyte-learning.md)** — Published free starter and a larger curriculum in development.
+- **[Prepnest Library](./prepnest-library.md)** — Teacher-resource discovery and preparation, in private review.
+- **[GHSchools](./ghschools.md)** — School discovery and preparation, in private review.
+- **[Ojanaa](./ojanaa.md)** — Commerce workflows and backend foundations, in development.
 
-## How I work
+## Build it, check it, teach it
 
-I start with a problem and an observable result. Codex supports implementation, iteration and checks; Claude Code provides complementary building and review. I inspect changes, test user journeys and recovery, and keep a record of what has actually been verified.
+I start with a real task and an observable result. Codex supports implementation and iteration; Claude Code adds complementary building and review. I check the changes, test recovery and document how to run the result.
 
-The same method shapes my teaching: a useful task, an example, practice, a check and a repeatable handoff. I want small-business owners to understand enough to use the result independently.
+My teaching follows the same approach: a worked example, practical use, a check and a reusable workflow.
 
-## Current focus
-
-US small and micro businesses, starting in Greater Boston: customer intake, stock information, business documents, practical AI skills and tools built around the work already happening.
-
-The [Clover/POS inventory pilot](../proposals/clover-inventory-pilot.md) is a proposed next project. My public portfolio distinguishes it from working systems and review builds.
+For local businesses, the [proposed Clover/POS inventory pilot](../proposals/clover-inventory-pilot.md) is one possible next project.
 
 [Ninobyte](https://ninobyte.com/) · [Portfolio](../README.md)

@@ -1,13 +1,11 @@
-# About Isaac Nortey
+# Isaac Nortey
 
-I run **Ninobyte**, a one-person software and practical AI training practice. I build with Codex and Claude Code, and I take responsibility for deciding what to build, checking the work and delivering it.
+I’m the person behind **Ninobyte**, a one-person software and practical AI training practice focused on US small and micro businesses, starting in Greater Boston.
 
-My current focus is helping small and micro businesses in the US, starting in Greater Boston. I’m interested in the everyday work that fills an owner’s week: handling requests, understanding stock, preparing documents, finding information and helping staff use their tools.
+I use Codex and Claude Code to help turn ideas into useful software. I own the requirements, review the changes, test the experience and decide what is ready to ship.
 
-My projects span live application systems, practical AI learning, education platforms, commerce workflows and AI integrations. [Builders 60](./case-studies/builders60.md) is a live example of the operational work; [the portfolio](./README.md) makes each project’s delivery status clear.
+My current work includes Builders 60’s live application service, Ninobyte Learning, education products in private review and commerce workflows in development.
 
-I use AI to increase what I can build, while retaining human judgment at the points that matter. I check outputs against their sources, test failure and recovery paths, and leave instructions someone else can follow.
+I’m interested in the work that fills an owner’s week: handling requests, understanding stock, preparing documents and helping staff use their tools. A useful first project starts with one of those tasks and ends with a result the owner can check and repeat.
 
-I also want people to leave a training session with something they can use: a checked output, a repeatable workflow and enough understanding to recognize when the answer is wrong.
-
-[Ninobyte](https://ninobyte.com/) · [Ninobyte Learning](https://learn.ninobyte.com/) · [LinkedIn](https://linkedin.com/in/inortey/) · [GitHub](https://github.com/iamnortey)
+[Explore the portfolio](./README.md) · [Ninobyte](https://ninobyte.com/) · [LinkedIn](https://linkedin.com/in/inortey/)
